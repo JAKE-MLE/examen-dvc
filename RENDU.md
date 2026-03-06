@@ -1,34 +1,27 @@
-SECHAO JACQUES
 
-jacques.sechao@icloud.com
+Rapport d'Examen MLOps / DVC - Prédiction de Silice
 
-https://dagshub.com/JAKE-MLE/examen-dvc
+Auteur
+
+    Nom : SECHAO
+
+    Prénom : JACQUES
+
+    Lien DagsHub : https://dagshub.com/JAKE-MLE/examen-dvc
 
 
+Description Technique
 
+Ce projet met en place une architecture MLOps robuste utilisant DVC pour le versionnement des données et DagsHub pour la collaboration.
 
+Choix de Modélisation
 
+- Prétraitement : Suppression de la colonne date (non prédictive) et normalisation via StandardScaler.
 
+- Modèle : RandomForestRegressor optimisé par GridSearchCV.
 
-
-Examen MLOps - Prédiction de la Silice
-
-Ce projet implémente une pipeline MLOps complète pour prédire la concentration de silice dans un processus de flottation minérale.
+- Résultat : Score $R^2$ de 0.1915. Bien que le score soit modeste, l'accent a été mis sur la reproductibilité totale de la pipeline.
 
 Pipeline DVC
 
-La pipeline est divisée en 5 étapes reproductibles :
-
-Split : Nettoyage (suppression de la date) et division du dataset.
-
-Normalize : Mise à l'échelle des features avec StandardScaler.
-
-GridSearch : Optimisation des hyperparamètres d'un RandomForestRegressor.
-
-Train : Entraînement du modèle final.
-
-Evaluate : Calcul du score R2 et génération des prédictions.
-
-Résultats
-
-Les métriques sont disponibles dans le dossier metrics/ et suivies via l'interface DagsHub.
+La pipeline est entièrement automatisée via le fichier dvc.yaml, permettant de reconstruire le modèle de bout en bout avec une seule commande dvc repro.
