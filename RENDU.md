@@ -7,7 +7,9 @@ Auteur
 
     Prénom : JACQUES
 
-    Lien DagsHub : https://dagshub.com/JAKE-MLE/examen-dvc
+    E-mail : jacques.sechao@icloud.com
+
+    Lien Repo DagsHub : https://dagshub.com/JAKE-MLE/examen-dvc
 
 
 Description Technique
